@@ -1,6 +1,5 @@
 
-
-import axios from "axios";
+import api from "./../../config.js";
 
 export const Types = { 
 	FILTER_TODO : "FILTER_TODO",
@@ -57,7 +56,7 @@ export const searchReducer = (state = initialState, action) => {
 
 export const getTodoFromApi = (data) => { 
 	return (dispatch, getState) => {
-		axios.get("http://localhost:3001/todos/index").then( (response) => {
+		api.get("http://localhost:3001/todos/index").then( (response) => {
 			dispatch({
 				type : Types.DATA_API,
 				payload : { 
@@ -89,7 +88,7 @@ export  const handleSearch = (e) => {
 export const handleKeyDown = (e, searchValue) => { 
 		return (dispatch) => {
 	if(e.keyCode === 13 && e.keyCode !== ""){ 
-		axios.post("http://localhost:3001/todos/store", {
+		api.post("http://localhost:3001/todos/store", {
 			title : searchValue, 
 			status : false
 		}).then( resp => dispatch(getTodoFromApi())	
@@ -102,7 +101,7 @@ export const handleKeyDown = (e, searchValue) => {
 
 export const toggleTodo = (todo) => {
 	return dispatch => { 
-		axios.put("http://localhost:3001/todos/update/"+todo._id, {
+		api.put("http://localhost:3001/todos/update/"+todo._id, {
 			status : !todo.status
 		}).then( resp => {
 			return dispatch(getTodoFromApi())
@@ -113,7 +112,7 @@ export const toggleTodo = (todo) => {
 export const removeTodo = (todo) => { 
 	return dispatch => { 
 		console.log(todo._id);
-		axios.delete("http://localhost:3001/todos/destroy/"+todo._id).
+		api.delete("http://localhost:3001/todos/destroy/"+todo._id).
 			then( response => { 
 				dispatch(getTodoFromApi())
 			}).
