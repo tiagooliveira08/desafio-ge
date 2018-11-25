@@ -1,0 +1,36 @@
+.globo-esporte__todo-list__footer {
+	width: 35%;
+	display: flex;
+	justify-content: space-around;
+	& > div { 
+			width: 50%;
+			display: inline-flex;
+			&:nth-child(1) {
+				align-items: center;
+			}
+			&:nth-child(2){
+			justify-content: space-around;
+		}
+
+	 }	
+
+
+}
+
+.globo-esporte__todo-list__footer__items {
+	color: #338B01;
+
+}
+
+.globo-esporte__todo-list__footer__button  {
+	cursor: pointer;
+	color: #338B01;
+	padding: 5px 15px;
+
+	&--active {
+		background-color: #2D7603;
+		color: #fff;
+		border-radius: 5px;
+	}
+
+}

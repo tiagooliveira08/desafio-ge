@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  border : 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  margin: 0 15px;
+}
+
+.index {
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  background-color: #ebebeb;
+}

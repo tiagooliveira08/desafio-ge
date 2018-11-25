@@ -1,0 +1,46 @@
+.globo-esporte__todo-list {
+	width: 35%;
+	background-color: white;
+	margin-top: 25px;
+	box-shadow: 1px 10px 10px #ccc;
+	color: #333;
+	font-size: 20px;
+	margin-bottom: 25px;
+	min-height: 300px;
+}
+
+.globo-esporte__todo-list table {
+	width: 100%;
+	border-collapse: collapse;
+
+}
+
+.globo-esporte__todo-list th {
+	text-align: left;
+	padding-bottom: 10px;
+	padding: 10px 30px;
+	border-bottom: 1px solid #f0f0f0;
+
+}
+
+.globo-esporte__todo-list__item:hover {
+	background-color: #ebebeb;
+	cursor: pointer;
+}
+.globo-esporte__todo-list__item:hover .globo-esporte__todo-list__item__icon-delete {
+	display: inline-block;
+}
+
+.globo-esporte__todo-list__item td {
+	padding: 15px 30px;
+	border: none;
+
+}
+.globo-esporte__todo-list__item--color-name {
+	color: #a29e9e;
+}
+
+.globo-esporte__todo-list__item__icon-delete {
+	margin-left: 20px;
+	display: none;
+}

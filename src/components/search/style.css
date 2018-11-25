@@ -1,0 +1,10 @@
+.globo-esporte__seach {
+	margin-top: 80px;
+	width: 50%;
+}
+.globo-esporte__seach input {
+	border-bottom:  1px solid #ccc;
+	width: 100%;
+	font-size: 30px;
+	background-color: transparent;
+}
